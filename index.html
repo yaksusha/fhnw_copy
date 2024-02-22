@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false" />
-    <title>pocket portals fhnw</title>
+    <title>Ksenia's attempts</title>
     <script src="./lib/hydra-synth.js"></script>
     <styLe>
         html,
@@ -23,9 +23,13 @@
 
 <body>
     <script type="module">
-        const h = new Hydra()
+        const h = new Hydra({ detectAudio:false})
 
-        osc(10, 0.1, 0.2).out()
+        s0.initCam()
+        gradient(0.03).colorama(4).out()
+        src(s0).luma(0.3,0.23	).out(o1)
+        src(o0).layer(o1).out(o2)
+        render(o2)
     </script>
 </body>
 
