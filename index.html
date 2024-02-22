@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false" />
-    <title>DAY FOUR!!! AHHHHHH</title>
+    <title>Ksenia's attempts
+    </title>
     <script src="./lib/hydra-synth.js"></script>
-    <script src="./lib/gyro.js"></script>
     <styLe>
         html,
         body {
@@ -26,10 +26,21 @@
 <body>
     <script type="module">
         const h = new Hydra()
+        s0.initCam()
+        gradient(0.03)
+        .colorama(4)
+        .out()
 
-        shape().scrollX(() => gyro.beta / 4).scrollY(() => gyro.gamma / 4).out()
-        gyro.requestPermissions(document.getElementById('gyro-button'))
-        gyro.show()
+        src(s0)
+        .luma(0.3,0.23)
+        .blend(o1,0.9)
+        .out(o1)
+
+        src(o0)
+        .layer(o1)
+        .kaleid(50)
+        .out(o2)
+        render(o2)
     </script>
     <button id="gyro-button">activate gyroscope</button>
 </body>
