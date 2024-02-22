@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false" />
-    <title>Ksenia's attempts</title>
+    <title>DAY FOUR!!! AHHHHHH</title>
     <script src="./lib/hydra-synth.js"></script>
+    <script src="./lib/gyro.js"></script>
     <styLe>
         html,
         body {
@@ -23,14 +25,13 @@
 
 <body>
     <script type="module">
-        const h = new Hydra({ detectAudio:false})
+        const h = new Hydra()
 
-        s0.initCam()
-        gradient(0.03).colorama(4).out()
-        src(s0).luma(0.3,0.23	).out(o1)
-        src(o0).layer(o1).out(o2)
-        render(o2)
+        shape().scrollX(() => gyro.beta / 4).scrollY(() => gyro.gamma / 4).out()
+        gyro.requestPermissions(document.getElementById('gyro-button'))
+        gyro.show()
     </script>
+    <button id="gyro-button">activate gyroscope</button>
 </body>
 
 </html>
