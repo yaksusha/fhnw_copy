@@ -27,16 +27,21 @@
             height: 100%;
             background: none;
             cursor: pointer;
+            border: none;
             background-size: cover;
             background-position: center;
             background-image: url("cover.png");
+            z-index: 200;
         }
     </styLe>
 </head>
 
 <body>
+    <button id="gyro-button">Start Psyko</button>
     <script type="module">
         const h = new Hydra()
+        gyro.requestPermissions(document.getElementById('gyro-button'))
+
         s0.initCam()
         gradient(0.03)
         .colorama(4)
@@ -52,9 +57,7 @@
         .kaleid(50)
         .out(o2)
         render(o2)
-    </script>
-    <button id="gyro-button">activate gyroscope</button>
- 
+    </script> 
 </body>
 
 </html>
